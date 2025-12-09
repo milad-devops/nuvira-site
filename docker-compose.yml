@@ -16,7 +16,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./devops-theme:/var/www/html/wp-content/themes/devops-theme
+      - ./:/var/www/html/wp-content/themes/devops-theme
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
