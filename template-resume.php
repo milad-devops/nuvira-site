@@ -14,17 +14,37 @@ get_header(); ?>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h3>Senior DevOps Engineer</h3>
-                            <span class="timeline-date">2020 - Present</span>
-                            <p>Company A</p>
-                            <p>Implemented CI/CD pipelines, automated infrastructure with Terraform, and managed Kubernetes clusters.</p>
+                            <span class="timeline-date">2022 - Present</span>
+                            <p><strong>Innovatech Solutions</strong></p>
+                            <ul>
+                                <li>Architected and implemented a scalable, multi-cloud Kubernetes platform, reducing deployment times by 60%.</li>
+                                <li>Led the migration of monolithic applications to a microservices architecture, improving reliability and developer velocity.</li>
+                                <li>Developed and maintained Infrastructure as Code (IaC) using Terraform and Ansible for AWS and Azure environments.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h3>DevOps Engineer</h3>
-                            <span class="timeline-date">2018 - 2020</span>
-                            <p>Company B</p>
-                            <p>Managed cloud infrastructure on AWS, automated deployments with Ansible, and monitored systems with Prometheus and Grafana.</p>
+                            <span class="timeline-date">2019 - 2022</span>
+                            <p><strong>CloudPioneers Inc.</strong></p>
+                            <ul>
+                                <li>Built and maintained CI/CD pipelines using Jenkins and GitLab CI, automating the build, test, and deployment of over 50 applications.</li>
+                                <li>Managed containerized applications using Docker and Docker Swarm, ensuring high availability and performance.</li>
+                                <li>Implemented a centralized logging and monitoring solution using the ELK Stack and Prometheus/Grafana.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Junior System Administrator</h3>
+                            <span class="timeline-date">2017 - 2019</span>
+                            <p><strong>TechFoundry Co.</strong></p>
+                            <ul>
+                                <li>Provided support for Linux and Windows server environments, ensuring 99.9% uptime.</li>
+                                <li>Automated routine system administration tasks using Bash and Python scripting.</li>
+                                <li>Assisted in the management of network infrastructure, including firewalls and switches.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

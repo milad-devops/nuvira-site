@@ -1,32 +1,45 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <?php
-        if ( is_singular() ) :
-            the_title( '<h1 class="entry-title">', '</h1>' );
-        else :
-            the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-        endif;
-        ?>
-    </header>
+	<header class="entry-header">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
 
-    <div class="entry-content">
-        <?php
-        the_content( sprintf(
-            wp_kses(
-                /* translators: %s: Name of current post. Only visible to screen readers */
-                __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'devopstheme' ),
-                array(
-                    'span' => array(
-                        'class' => array(),
-                    ),
-                )
-            ),
-            get_the_title()
-        ) );
-        ?>
-    </div>
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+                <span>Posted on <?php the_date(); ?></span> by <span><?php the_author(); ?></span>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
 
-    <footer class="entry-footer">
-        <!-- Entry footer content -->
-    </footer>
-</article>
+	<div class="entry-content">
+		<?php
+		if ( is_singular() ) {
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'devopstheme' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				)
+			);
+		} else {
+			the_excerpt();
+            echo '<a href="' . esc_url( get_permalink() ) . '" class="btn">Read More</a>';
+		}
+		?>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<!-- Entry footer content -->
+	</footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->

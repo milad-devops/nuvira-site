@@ -47,6 +47,42 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/project4.svg'; ?>" alt="Project 4">
+                            </div>
+                            <div class="card-back">
+                                <h3>Project 4</h3>
+                                <p>A brief description of the project.</p>
+                                <a href="#">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/project5.svg'; ?>" alt="Project 5">
+                            </div>
+                            <div class="card-back">
+                                <h3>Project 5</h3>
+                                <p>A brief description of the project.</p>
+                                <a href="#">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/project6.svg'; ?>" alt="Project 6">
+                            </div>
+                            <div class="card-back">
+                                <h3>Project 6</h3>
+                                <p>A brief description of the project.</p>
+                                <a href="#">View Project</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

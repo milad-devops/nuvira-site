@@ -3,6 +3,16 @@
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Automate. Innovate. Dominate.</h1>
+                    <p class="hero-subtitle">DevOps solutions for the modern era.</p>
+                    <a href="#portfolio" class="btn">View My Work</a>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="about-me">
             <div class="container">
                 <div class="about-me-content">
