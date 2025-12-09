@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="ss" x1="0" x2="1"><stop offset="0" stop-color="#7cfffb"/><stop offset="1" stop-color="#7a5cff"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#07070b"/>
+  <g transform="translate(60,60)">
+    <rect width="1080" height="240" rx="14" fill="#0e0e12"/>
+    <text x="28" y="70" font-family="Inter, sans-serif" font-size="40" fill="url(#ss)">Nuvira</text>
+    <text x="28" y="112" font-family="Inter, sans-serif" font-size="20" fill="#9fb9c9">DevOps • Infrastructure • Automation</text>
+
+    <g transform="translate(0,320)">
+      <rect width="720" height="400" rx="12" fill="#0b0b10" opacity="0.9"/>
+      <rect x="740" width="320" height="190" rx="10" fill="#0b0b10" opacity="0.9"/>
+      <rect x="740" y="210" width="320" height="160" rx="10" fill="#0b0b10" opacity="0.9"/>
+    </g>
+  </g>
+</svg>
