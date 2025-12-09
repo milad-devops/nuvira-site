@@ -4,17 +4,36 @@ get_header(); ?>
 
 <section class="hero">
   <div class="container hero-grid">
-    <div class="hero-left">
+    <div class="hero-left" style="z-index:2">
       <h1 class="neon-title">I build resilient infrastructure & pipelines</h1>
       <p class="lead">DevOps engineer focusing on infrastructure as code, CI/CD, observability and cloud automation.</p>
-      <div class="cta-row">
+
+      <div class="graphics-row">
+        <div class="graphic-pill glass">
+          <?php echo file_get_contents(get_template_directory() . '/assets/images/network-diagram.svg'); ?>
+          <div>
+            <strong>Distributed Systems</strong>
+            <div class="muted">Kubernetes, clusters, service mesh</div>
+          </div>
+        </div>
+
+        <div class="graphic-pill glass">
+          <?php echo file_get_contents(get_template_directory() . '/assets/images/server-rack.svg'); ?>
+          <div>
+            <strong>Scalable Platforms</strong>
+            <div class="muted">Auto-scaling & observability</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:18px">
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('/portfolio')); ?>">View Portfolio</a>
         <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/contact')); ?>">Contact Me</a>
       </div>
     </div>
 
     <div class="hero-right">
-      <div class="avatar-3d card-3d">
+      <div class="avatar-3d card-3d glass" aria-hidden="true">
         <?php echo file_get_contents(get_template_directory() . '/assets/images/avatar.svg'); ?>
         <div class="avatar-bands"></div>
       </div>
@@ -22,21 +41,8 @@ get_header(); ?>
   </div>
 
   <!-- SVG Network lines -->
-  <div class="svg-network">
-    <svg viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="g1" x1="0" x2="1">
-          <stop offset="0%" stop-color="#7cfffb"/>
-          <stop offset="100%" stop-color="#7a5cff"/>
-        </linearGradient>
-      </defs>
-      <path class="network-line" d="M10 160 C150 20, 300 180, 390 80 C510 0, 650 120, 790 40" stroke="url(#g1)" stroke-width="2" fill="none"/>
-      <g class="nodes">
-        <circle cx="10" cy="160" r="4" fill="#7cfffb"></circle>
-        <circle cx="390" cy="80" r="4" fill="#7a5cff"></circle>
-        <circle cx="790" cy="40" r="4" fill="#9dffb3"></circle>
-      </g>
-    </svg>
+  <div class="svg-network" aria-hidden="true">
+    <?php echo file_get_contents(get_template_directory() . '/assets/images/animated-lines.svg'); ?>
   </div>
 </section>
 
@@ -69,7 +75,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="timeline glass">
+      <div class="timeline glass" style="margin-top:18px">
         <h3>Timeline</h3>
         <ol class="timeline-list">
           <li><strong>2024</strong> Senior DevOps Engineer — Cloud migrations & IaC</li>
@@ -88,21 +94,22 @@ get_header(); ?>
   </header>
 
   <div class="cards-grid">
-    <?php for ($i = 1; $i <= 3; $i++): ?>
+    <?php for ($i = 1; $i <= 4; $i++): ?>
       <article class="project-card card-3d glass">
         <div class="project-media">
-          <?php echo file_get_contents(get_template_directory() . '/assets/images/placeholder-' . ($i % 2 ? '1' : '2') . '.svg'); ?>
+          <?php echo file_get_contents(get_template_directory() . '/assets/images/placeholder-' . ($i % 3 === 0 ? '3' : ($i % 2 ? '1' : '2')) . '.svg'); ?>
         </div>
-        <div class="project-body">
+        <div class="project-body" style="padding:16px">
           <h4>Project <?php echo $i; ?></h4>
-          <p class="muted">Automated deployment pipelines and multi-region failover</p>
-          <div class="tags">
+          <p class="muted">Automated deployment pipelines and multi-region failover, monitoring and cost savings.</p>
+          <div class="tags" style="margin-top:8px">
             <span>Terraform</span><span>GitHub Actions</span>
           </div>
         </div>
       </article>
     <?php endfor; ?>
   </div>
+
   <div class="center">
     <a class="btn btn-outline" href="<?php echo esc_url(home_url('/portfolio')); ?>">See All Projects</a>
   </div>
